@@ -1,0 +1,71 @@
+# Title 
+print('         *********************************')
+print('          Hello,Welcome to AMA ebookstore')
+print('         *********************************')
+print('please select your desired genres\nscifi,horror,mystery,novel,selfhelp')
+
+#Genre and Books available 
+scifi=['The Martian,','Frankenstein,','I,Robot,','Ready Player One,','the time machine'] 
+horror=['The Shining,','Haunting Of Hill House,','The Silence of the Lambs,','The Exorcist,','American Psyco']
+mystery=['Sharp Objects,','Double Cross,','Angels and Demons,','Battle Ground,','The Da Vinci Code']
+novel=['To Kill a Mockingbird,','The Great Gatsby,','Pride and prejudice,','The Lord Of The Rings,','War and Peace']
+selfhelp=['Think and grow rich,','The subtle art of not giving a fuck,','The power of habit,','12 rules for life,','the 48 laws of power']
+genre=[scifi,horror,mystery,novel,selfhelp]
+Genre=['scifi','horror','mystery','novel','selfhelp']
+
+#Genre input
+g=input('type your desired genre : ')
+for i in Genre:
+    if i == g:
+        a=Genre.index(i)
+        print(*genre[a])
+ 
+    
+#book input
+b=input("enter the desired book : ")
+b+=","
+def book_input():
+    global Genre 
+    global b
+    global a
+    for i in genre[a]:
+        if i == b:
+            d=input("Press 1 to add to cart and 2 to go back : ")
+            if d == "1":
+                print ("Added to cart")
+                continue_payment=input("Press 1 to proceed to payment Press 2 to continue shopping : ")
+                if continue_payment == "1":
+                    print("CONFIRMATION OF ORDER")
+                elif continue_payment == "2":
+                    g=input('type your desired genre : ')
+                    for i in Genre:
+                        if i == g:
+                            a=Genre.index(i)
+                            print(*genre[a])
+                    b=input("enter the desired book : ")
+                    b+=","
+                    book_input()
+                else:
+                    print("Invalid input")
+            elif d == "2":
+                b=input("Enter the desired book : ")
+                d=input("Press 1 to add to cart and 2 to go back : ")
+                if d == "1":
+                    print ("Added to cart")
+                    continue_payment=input("Press 1 to proceed to payment Press 2 to continue shopping : ")
+                    if continue_payment == "1":
+                        print("CONFIRMATION OF ORDER")
+                    elif continue_payment == "2":
+                        g=input('type your desired genre : ')
+                        for i in Genre:
+                            if i == g:
+                                a=Genre.index(i)
+                                print(*genre[a])
+                        b=input("enter the desired book : ")
+                        b+=","
+                        book_input()  
+            else:
+                print("invalid input")
+book_input()
+
+
