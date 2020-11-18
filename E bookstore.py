@@ -1,3 +1,4 @@
+
 # Title 
 print('         *********************************')
 print('          Hello,Welcome to AMA ebookstore')
@@ -9,10 +10,11 @@ scifi=['The Martian,','Frankenstein,','I,Robot,','Ready Player One,','The Time M
 horror=['The Shining,','Haunting Of Hill House,','The Silence of the Lambs,','The Exorcist,','American Psycho,']
 mystery=['Sharp Objects,','Double Cross,','Angels and Demons,','Battle Ground,','The Da Vinci Code,']
 novel=['To Kill a Mockingbird,','The Great Gatsby,','Pride and prejudice,','The Lord Of The Rings,','War and Peace,']
-selfhelp=['Think and grow rich,','The subtle art of not giving a fuck,','The power of habit,','12 rules for life,','the 48 laws of power,']
+selfhelp=['Think nd grow rich,','The subtle art of not giving a fuck,','The power of habit,','12 rules for life,','the 48 laws of power,']
 genre=[scifi,horror,mystery,novel,selfhelp]
 Genre=['scifi','horror','mystery','novel','selfhelp']
-
+cart=[]
+total=[]
 
 #Genre input
 g=input('type your desired genre : ')
@@ -41,7 +43,8 @@ dogged refusal to quit — he steadfastly confronts one seemingly insurmountable
 Will his resourcefulness be enough to overcome the impossible odds against him?""")
         print("\nAUTHOR - ANDY WEIR" )
         print("\nPAPER BACK - Rs 500")
-        
+        cost=500
+        total.append(cost)
         
     elif b == "Frankenstein,":
         print("""                  ********About the story********
@@ -50,16 +53,16 @@ Though it initially seeks affection, the monster inspires loathing in everyone w
 Lonely and miserable, the monster turns upon its creator, who eventually loses his life.""")
         print("\nAUTHOR - MARY SHELLY" )
         print("\nPAPER BACK - Rs 300")
-        
-        
+        cost=300
+        total.append(cost)
     elif b == "I,Robot,":
         print("""                  ********About the story********
 A collection of nine short stories that imagines the development of “positronic” (humanlike),
 with a form of artificial intelligence) robots and wrestles with the moral implications of the technology. """)
         print("\nAUTHOR -  ISAAC ASIMOV" )
         print("\nPAPER BACK - Rs 310")
-       
-        
+        cost=500
+        total.append(cost)
     elif b == "Ready Player One,":
         print("""                  ********About the story********
 IN THE YEAR 2044, reality is an ugly place.
@@ -70,8 +73,8 @@ But when Wade stumbles upon the first clue, he finds himself beset by players wi
 The race is on, and if Wade's going to survive, he'll have to win—and confront the real world he's always been so desperate to escape.""")
         print("\nAUTHOR -  ERNEST CLINE" )
         print("\nPAPER BACK - Rs 470")
-        
-        
+        cost=470
+        total.append(cost)
     elif b == "The Time Machine,":
         print("""                  ********About the story********
 A Victorian scientist, claims that he has invented a device that enables him to travel through time,
@@ -79,8 +82,8 @@ and has visited the future, arriving in the year 802,701 in what had once been L
 """)
         print("\nAUTHOR - H.G.WELLS" )
         print("\nPAPER BACK - Rs 150")
-        
-        
+        cost=150
+        total.append(cost)
     elif b == "The Shining,":
         print("""                  ********About the story********
 Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start.
@@ -90,8 +93,8 @@ But as the harsh winter weather sets in, the idyllic location feels ever more re
 And the only one to notice the strange and terrible forces gathering around the Overlook is Danny Torrance, a uniquely gifted five-year-old.""")
         print("\nAUTHOR - STEPHEN KING" )
         print("\nPAPER BACK - Rs 300")
-        
-        
+        cost=300
+        total.append(cost)
     elif b == "Haunting Of Hill House,":
         print("""                  ********About the story********
 Four seekers who arrive at a notoriously unfriendly pile called Hill House:
@@ -103,16 +106,16 @@ At first, their stay seems destined to be merely a spooky encounter with inexpli
 But Hill House is gathering its powers—and soon it will choose one of them to make its own.""")
         print("\nAUTHOR - SHIRLEY JACKSON" )
         print("\nPAPER BACK - Rs 290")
-        
-        
+        cost=290
+        total.append(cost)
     elif b == "The Silence of the Lambs,":
         print("""                  ********About the story********
 A young FBI trainee. An evil genius locked away for unspeakable crimes.
 A plunge into the darkest chambers of a psychopath's mind--in the deadly search for a serial killer.""")
         print("\nAUTHOR - THOMAS HARRIS" )
         print("\nPAPER BACK - Rs 350")
-        
-        
+        cost=350
+        total.append(cost)
     elif b == "The Exorcist,":
         print("""                  ********About the story********
 The terror begins unobtrusively. Noises in the attic.
@@ -124,8 +127,8 @@ Father Damien Karras, a Jesuit priest, is called in.
 Is it possible that a demonic presence has possessed the child? Exorcism seems to be the only answer...""")
         print("\nAUTHOR - WILLIAM PETER BLATTY" )
         print("\nPAPER BACK - Rs 940")
-        
-        
+        cost=940
+        total.append(cost)
     elif b == "American Psycho,":
         print("""                  ********About the story********
 Patrick Bateman is twenty-six and he works on Wall Street, he is handsome, sophisticated, charming and intelligent. He is also a psychopath.
@@ -133,8 +136,8 @@ Taking us to head-on collision with America's greatest dream—and its worst nig
 we all recognise but do not wish to confront.""")
         print("\nAUTHOR - BRET EASTON ELLIS" )
         print("\nPAPER BACK - Rs 470")
-       
-        
+        cost=470
+        total.append(cost)
     elif b == "Sharp Objects":
         print("""                  ********About the story********
 Fresh from a brief stay at a psych hospital,
@@ -144,8 +147,8 @@ Now, installed in her old bedroom in her family's Victorian mansion, Camille fin
 Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.""")
         print("\nAUTHOR - GILLIAN FLYNN" )
         print("\nPAPER BACK - Rs 480")
-        
-        
+        cost=480
+        total.append(cost)
     elif b == "Double Cross,":
         print("""                  ********About the story********
 Just when Alex thought his life was calming down into a routine of patients and therapy sessions, he finds himself back in the game--this time to catch a criminal mastermind like no other.
@@ -157,8 +160,8 @@ As victims are made into gruesome spectacles citywide, inducing a media hysteria
 The killer has the whole city by its strings--and he'll stop at nothing to become the most terrifying star that Washington D.C. has ever seen""")
         print("\nAUTHOR - JAMES PATTERSON" )
         print("\nPAPER BACK - Rs 890")
-        
-        
+        cost=890
+        total.append(cost)
     elif b == "Angels and Demons,":
         print("""                  ********About the story********
 World-renowned Harvard symbologist Robert Langdon is summoned to a Swiss research facility to analyze a cryptic symbol seared into the chest of a murdered physicist.
@@ -168,8 +171,8 @@ Together they embark on a frantic hunt through sealed crypts, dangerous catacomb
 and into the depths of the most secretive vault on earth...the long-forgotten Illuminati lair.""")
         print("\nAUTHOR - DAN BROWN" )
         print("\nPAPER BACK - Rs 250")
-       
-        
+        cost=250
+        total.append(cost)
     elif b == "Battle Ground,":
         print("""                  ********About the story********
 THINGS ARE ABOUT TO GET SERIOUS FOR HARRY DRESDEN, CHICAGO’S ONLY PROFESSIONAL WIZARD, in the next entry in the #1 New York Times bestselling Dresden Files.
@@ -181,8 +184,8 @@ And she’s bringing an army. The Last Titan has declared war on the city of Chi
 Harry’s mission is simple but impossible: Save the city by killing a Titan. And the attempt will change Harry’s life, Chicago, and the mortal world forever.""")
         print("\nAUTHOR - JIM BUTCHER" )
         print("\nPAPER BACK - Rs 1300")
-        
-        
+        cost=1300
+        total.append(cost)
     elif b == "The Da Vinci Code,":
         print("""                  ********About the story********
 While in Paris, Harvard symbologist Robert Langdon is awakened by a phone call in the dead of the night.
@@ -195,56 +198,51 @@ Unless Langdon and Neveu can decipher the labyrinthine puzzle—while avoiding t
 ancient truth will be lost forever.""")
         print("\nAUTHOR - DAN BROWN" )
         print("\nPAPER BACK - Rs 400")
-       
-        
+        cost=400
+        total.append(cost)
     elif b == "To Kill a Mockingbird,":
         print("""                  ********About the story********
 "Shoot all the bluejays you want, if you can hit 'em, but remember it's a sin to kill a mockingbird."
-
 A lawyer's advice to his children as he defends the real mockingbird of Harper Lee's classic novel—a black man charged with the rape of a white girl.
 Through the young eyes of Scout and Jem Finch,Harper Lee explores with rich humor and unswerving honesty the irrationality of adult attitudes toward race and class
 in the Deep South of the 1930s.The conscience of a town steeped in prejudice, violence, and hypocrisy is pricked by the stamina and quiet heroism
 of one man's struggle for justice—but the weight of history will only tolerate so much.""")
         print("\nAUTHOR - HARPER LEE" )
         print("\nPAPER BACK - Rs 500")
-        
-        
+        cost=500
+        total.append(cost)
     elif b == "The Great Gatsby,":
         print("""                  ********About the story********
 The tragic story of Jay Gatsby, a self-made millionaire, and his pursuit of Daisy Buchanan, a wealthy young woman whom he loved in his youth.""")
         print("\nAUTHOR - F. SCOTT FITZGERALD" )
         print("\nPAPER BACK - Rs 150")
-       
-        
+        cost=150
+        total.append(cost)
     elif b == "Pride and prejudice,":
         print("""                  ********About the story********
 A classic of English literature, written with incisive wit and superb character delineation, it centres on the turbulent relationship
 between Elizabeth Bennet, the daughter of a country gentleman, and Fitzwilliam Darcy, a rich aristocratic landowner.""")
         print("\nAUTHOR - JANE AUSTEN" )
         print("\nPAPER BACK - Rs 150")
-        
-        
+        cost=150
+        total.append(cost)
     elif b == "The Lord Of The Rings,":
         print("""                  ********About the story********
 One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them
-
 In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power
 so that he could rule all others.But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him.
 After many ages it fell by chance into the hands of the hobbit Bilbo Baggins.
-
 From Sauron's fastness in the Dark Tower of Mordor, his power spread far and wide.
 Sauron gathered all the Great Rings to him, but always he searched for the One Ring that would complete his dominion.
-
 When Bilbo reached his eleventy-first birthday he disappeared, bequeathing to his young cousin Frodo
 the Ruling Ring and a perilous quest: to journey across Middle-earth, deep into the shadow of the Dark Lord, and destroy the Ring
 by casting it into the Cracks of Doom.
-
 The Lord of the Rings tells of the great quest undertaken by Frodo and the Fellowship of the Ring: Gandalf the Wizard; the hobbits Merry,
 Pippin, and Sam; Gimli the Dwarf; Legolas the Elf; Boromir of Gondor; and a tall, mysterious stranger called Strider.""")
         print("\nAUTHOR - J.R.R. TOLKIEN" )
         print("\nPAPER BACK - Rs 700")
-        
-        
+        cost=700
+        total.append(cost)
     elif b == "War and Peace,":
         print("""                  ********About the story********
 War and Peace is an affirmation of life itself, `a complete picture', as a contemporary reviewer put it
@@ -253,20 +251,19 @@ as fear of Napoleon's ongoing war making begins to set in.
 Andrey Bolkonsky and Nikolay Rostov go to the Austrian front under General Kutuzov, to engage with Napoleon's troops.""")
         print("\nAUTHOR - LEO TOLSTOY" )
         print("\nPAPER BACK - Rs 350")
-        
-        
+        cost=350
+        total.append(cost)
     elif b == "Think and grow rich,":
         print("""                  ********About the story********
 Think and Grow Rich, based on the author’s famed Law of Success,
 represents the distilled wisdom of distinguished men of great wealth and achievement. 
-
 Andrew Carnegie’s magic formula for success was the direct inspiration for this book.
 Carnegie demonstrated its soundness when his coaching brought fortunes
 to those young men to whom he had disclosed his secret.""")
         print("\nAUTHOR - NAPOLEON HILL" )
         print("\nPAPER BACK - Rs 910")
-        
-        
+        cost=910
+        total.append(cost)
     elif b == "The subtle art of not giving a fuck,":
         print("""                  ********About the story********
 “Not everybody can be extraordinary—there are winners and losers in society, and some of it is not fair or your fault.”
@@ -277,27 +274,24 @@ to find the courage and confidence we desperately seek.
 Manson brings a much-needed grab-you-by-the-shoulders-and-look-you-in-the-eyes moment of real-talk, filled with entertaining stories and profane, ruthless humor""")
         print("\nAUTHOR - MARK MANSON" )
         print("\nPAPER BACK - Rs 300")
-        
-        
+        cost=300
+        total.append(cost)
     elif b == "The power of habit,":
         print("""                  ********About the story********
 A young woman walks into a laboratory. Over the past two years, she has transformed almost every aspect of her life.
 She has quit smoking, run a marathon, and been promoted at work. The patterns inside her brain, neurologists discover, have fundamentally changed.
-
 Marketers at Procter & Gamble study videos of people making their beds.
 They are desperately trying to figure out how to sell a new product called Febreze, on track to be one of the biggest flops in company history.
 Suddenly, one of them detects a nearly imperceptible pattern—and with a slight shift in advertising, Febreze goes on to earn a billion dollars a year.
-
 An untested CEO takes over one of the largest companies in America.
 His first order of business is attacking a single pattern among his employees—how they approach worker safety—and soon the firm,
 Alcoa, becomes the top performer in the Dow Jones.
-
 What do all these people have in common?
 They achieved success by focusing on the patterns that shape every aspect of our lives.""")
         print("\nAUTHOR - CHARLES DUHIGG" )
         print("\nPAPER BACK - Rs 250")
-        
-        
+        cost=250
+        total.append(cost)
     elif b == "12 rules for life,":
         print("""                  ********About the story********
 What does everyone in the modern world need to know?
@@ -305,16 +299,16 @@ Renowned psychologist Jordan B. Peterson's answer to this most difficult of ques
 uniquely combines the hard-won truths of ancient tradition with the stunning revelations of cutting-edge scientific research.""")
         print("\nAUTHOR - JORDAN PETERSON" )
         print("\nPAPER BACK - Rs 410")
-        
-        
+        cost=410
+        total.append(cost)
     elif b == "the 48 laws of power,":
         print("""                  ********About the story********
 This amoral, cunning, ruthless, and instructive book synthesizes the philosophies of Machiavelli,
 Sun Tzu, and Carl Von Clausewitz with the historical legacies of statesmen, warriors, seducers, and con men throughout the ages""")
         print("\nAUTHOR - ROBERT GREENE" )
         print("\nPAPER BACK - Rs 460")
-        
-        
+        cost=460
+        total.append(cost)
     else:
         print("Invalid input")
     
@@ -324,6 +318,7 @@ Sun Tzu, and Carl Von Clausewitz with the historical legacies of statesmen, warr
 #book input
 b=input("enter the desired book : ")
 b+=","
+cart.append(b)
 def book_input():
     global Genre 
     global b
@@ -337,6 +332,8 @@ def book_input():
                 continue_payment=input("Press 1 to proceed to payment Press 2 to continue shopping : ")
                 if continue_payment == "1":
                     print("CONFIRMATION OF ORDER")
+                    print(*cart)
+                    print('GRAND TOTAL :',sum(total))
                 elif continue_payment == "2":
                     g=input('type your desired genre : ')
                     for i in Genre:
@@ -345,6 +342,7 @@ def book_input():
                             print(*genre[a])
                     b=input("enter the desired book : ")
                     b+=","
+                    cart.append(b)
                     book_input()
                 
             elif d == "2":
@@ -356,6 +354,8 @@ def book_input():
                     continue_payment=input("Press 1 to proceed to payment Press 2 to continue shopping : ")
                     if continue_payment == "1":
                         print("CONFIRMATION OF ORDER")
+                        print(*cart)
+                        print('GRAND TOTAL :',sum(total))
                     elif continue_payment == "2":
                         g=input('type your desired genre : ')
                         for i in Genre:
@@ -364,11 +364,9 @@ def book_input():
                                 print(*genre[a])
                         b=input("enter the desired book : ")
                         b+=","
+                        cart.append(b)
                         book_input()
                         
             else:
                 print("invalid input")
 book_input()
-
-
-
