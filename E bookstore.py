@@ -1,4 +1,4 @@
-
+ 
 
 # Title 
 print('         *********************************')
@@ -365,7 +365,14 @@ def book_input():
                     book_input()
                 
             elif d == "2":
+                print('please select your desired genre\nscifi,horror,mystery,novel,selfhelp')
+                g=input('type your desired genre : ')
+                for i in Genre:
+                        if i == g:
+                            a=Genre.index(i)
+                            print(*genre[a])
                 b=input("Enter the desired book : ")
+                b+=','
                 book_details()
                 d=input("Press 1 to add to cart and 2 to go back : ")
                 if d == "1":
@@ -390,3 +397,4 @@ def book_input():
             else:
                 print("invalid input")
 book_input()
+
