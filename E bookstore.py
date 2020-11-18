@@ -1,9 +1,10 @@
 
+
 # Title 
 print('         *********************************')
 print('          Hello,Welcome to AMA ebookstore')
 print('         *********************************')
-print('please select your desired genres\nscifi,horror,mystery,novel,selfhelp')
+print('please select your desired genre\nscifi,horror,mystery,novel,selfhelp')
 
 #Genre and Books available 
 scifi=['The Martian,','Frankenstein,','I,Robot,','Ready Player One,','The Time Machine,'] 
@@ -331,10 +332,28 @@ def book_input():
                 print ("Added to cart")
                 continue_payment=input("Press 1 to proceed to payment Press 2 to continue shopping : ")
                 if continue_payment == "1":
-                    print("CONFIRMATION OF ORDER")
+                    print("\n                       *********CONFIRMATION OF purchase*********")
+                    print("\n ENTER THE FOLLOWING DETAILS :")
+                    name = input("Enter Your Name : ")
+                    email_id = input("Enter Your Email ID : ")
+                    mobile_no = input("Enter Your Mobile Number : ")
+                    print("NAME : ",name)
+                    print("EMAIL ID : ",email_id)
+                    print("MOBILE NUMBER : ",mobile_no)
+                    changes = input("Press 1 to make changes \nPress 2 to continue : ")
+                    if changes == "1":
+                        name = input("Enter Your Name : ")
+                        email_id = input("Enter Your Email ID : ")
+                        mobile_no = input("Enter Your Mobile Number : ")
+                        print("NAME : ",name)
+                        print("EMAIL ID : ",email_id)
+                        print("MOBILE NUMBER : ",mobile_no)
+                        
+                    print("\n                       ********* YOUR ORDER *********\n")         
                     print(*cart)
                     print('GRAND TOTAL :',sum(total))
                 elif continue_payment == "2":
+                    print('please select your desired genre\nscifi,horror,mystery,novel,selfhelp')
                     g=input('type your desired genre : ')
                     for i in Genre:
                         if i == g:
@@ -357,6 +376,7 @@ def book_input():
                         print(*cart)
                         print('GRAND TOTAL :',sum(total))
                     elif continue_payment == "2":
+                        print('please select your desired genre\nscifi,horror,mystery,novel,selfhelp')
                         g=input('type your desired genre : ')
                         for i in Genre:
                             if i == g:
