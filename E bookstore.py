@@ -1,4 +1,4 @@
- 
+
 
 # Title 
 print('         *********************************')
@@ -324,6 +324,7 @@ def book_input():
     global Genre 
     global b
     global a
+    global d
     for i in genre[a]:
         if i == b:
             book_details()
@@ -348,10 +349,29 @@ def book_input():
                         print("NAME : ",name)
                         print("EMAIL ID : ",email_id)
                         print("MOBILE NUMBER : ",mobile_no)
+                    elif changes=='2':   
+                        print("\n                       ********* YOUR ORDER *********\n")         
+                        print(*cart)
+                        print('GRAND TOTAL :',sum(total))
                         
-                    print("\n                       ********* YOUR ORDER *********\n")         
-                    print(*cart)
-                    print('GRAND TOTAL :',sum(total))
+                        print('please select a payment method :\nnet banking , credit/debit card , upi')
+                        payment_method=input=('>>>>')
+                        if payment_method=="net banking":
+                            bank=input('please type your bank:')
+                            print('\n\n\n******************YOU WILL BE REDIRECTED IN A FEW MINUTES****************')
+                            print('thank you for banking with us')
+                        elif payment_method=="credit/debit card":
+                            card_no=input('enter your card number')
+                            cvv=input('enter your cvv number')
+                            expiry=input('enter expiry date')
+                            print('\n total will be detucted from your account')
+                            print('\n\n\t\t********THANK YOU*********')
+                        elif payment_method=="upi":
+                            upi=input('enter upi id:')
+                            print('ID VERIFIED')
+                            print('total will be detucted')
+                            print('\n\n\t\t********THANK YOU*********')
+                 
                 elif continue_payment == "2":
                     print('please select your desired genre\nscifi,horror,mystery,novel,selfhelp')
                     g=input('type your desired genre : ')
@@ -379,9 +399,45 @@ def book_input():
                     print ("Added to cart")
                     continue_payment=input("Press 1 to proceed to payment Press 2 to continue shopping : ")
                     if continue_payment == "1":
-                        print("CONFIRMATION OF ORDER")
+                         print("\n                       *********CONFIRMATION OF purchase*********")
+                    print("\n ENTER THE FOLLOWING DETAILS :")
+                    name = input("Enter Your Name : ")
+                    email_id = input("Enter Your Email ID : ")
+                    mobile_no = input("Enter Your Mobile Number : ")
+                    print("NAME : ",name)
+                    print("EMAIL ID : ",email_id)
+                    print("MOBILE NUMBER : ",mobile_no)
+                    changes = input("Press 1 to make changes \nPress 2 to continue : ")
+                    if changes == "1":
+                        name = input("Enter Your Name : ")
+                        email_id = input("Enter Your Email ID : ")
+                        mobile_no = input("Enter Your Mobile Number : ")
+                        print("NAME : ",name)
+                        print("EMAIL ID : ",email_id)
+                        print("MOBILE NUMBER : ",mobile_no)
+                    elif changes=='2':   
+                        print("\n                       ********* YOUR ORDER *********\n")         
                         print(*cart)
                         print('GRAND TOTAL :',sum(total))
+                        
+                        print('please select a payment method :\nnet banking , credit/debit card , upi')
+                        payment_method=input=('>>>>')
+                        if payment_method=="net banking":
+                            bank=input('please type your bank:')
+                            print('\n\n\n******************YOU WILL BE REDIRECTED IN A FEW MINUTES****************')
+                            print('thank you for banking with us')
+                        elif payment_method=="credit/debit card":
+                            card_no=input('enter your card number')
+                            cvv=input('enter your cvv number')
+                            expiry=input('enter expiry date')
+                            print('\n total will be detucted from your account')
+                            print('\n\n\t\t********THANK YOU*********')
+                        elif payment_method=="upi":
+                            upi=input('enter upi id:')
+                            print('ID VERIFIED')
+                            print('total will be detucted')
+                            print('\n\n\t\t********THANK YOU*********')
+                 
                     elif continue_payment == "2":
                         print('please select your desired genre\nscifi,horror,mystery,novel,selfhelp')
                         g=input('type your desired genre : ')
@@ -397,4 +453,3 @@ def book_input():
             else:
                 print("invalid input")
 book_input()
-
