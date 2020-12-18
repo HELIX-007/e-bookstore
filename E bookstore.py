@@ -1,4 +1,4 @@
-
+ 
 
 # Title 
 print('         *********************************')
@@ -22,7 +22,12 @@ g=input('type your desired genre : ')
 for i in Genre:
     if i == g:
         a=Genre.index(i)
-        print(*genre[a])
+        f=genre[a]
+        for i in f:
+            print(i)
+             
+            
+
 
 #book description and price
 def book_details():
@@ -318,13 +323,14 @@ Sun Tzu, and Carl Von Clausewitz with the historical legacies of statesmen, warr
     
 #book input
 b=input("enter the desired book : ")
-b+=","
+b+="," 
 cart.append(b)
 def book_input():
     global Genre 
     global b
     global a
-    global d
+    global input
+    flag = 0
     for i in genre[a]:
         if i == b:
             book_details()
@@ -337,11 +343,21 @@ def book_input():
                     print("\n ENTER THE FOLLOWING DETAILS :")
                     name = input("Enter Your Name : ")
                     email_id = input("Enter Your Email ID : ")
+                    while '@' not in email_id:
+                        print('\n***INVALID MAIL ID ***')
+                        email_id = input("Enter Your Email ID : ")
+
                     mobile_no = input("Enter Your Mobile Number : ")
-                    print("NAME : ",name)
-                    print("EMAIL ID : ",email_id)
-                    print("MOBILE NUMBER : ",mobile_no)
-                    changes = input("Press 1 to make changes \nPress 2 to continue : ")
+                    while len(mobile_no)!= 10:
+                        print('\n *** INVALID MOBILE NUMBER ***')
+                        mobile_no = input("\nEnter Your Mobile Number : ")
+                    else:
+                     print('\nCUSTOMER DETAILS')
+                     print('================')
+                     print("NAME : ",name)
+                     print("EMAIL ID : ",email_id)
+                     print("MOBILE NUMBER : ",mobile_no)
+                    changes = input("\nPress 1 to make changes \nPress 2 to continue : ")
                     if changes == "1":
                         name = input("Enter Your Name : ")
                         email_id = input("Enter Your Email ID : ")
@@ -355,18 +371,19 @@ def book_input():
                         print('GRAND TOTAL :',sum(total))
                         
                         print('please select a payment method :\nnet banking , credit/debit card , upi')
-                        payment_method=input=('>>>>')
-                        if payment_method=="net banking":
+                        print(' 1             2                3 ')
+                        payment_method=input('>>>>')
+                        if payment_method=="1":
                             bank=input('please type your bank:')
                             print('\n\n\n******************YOU WILL BE REDIRECTED IN A FEW MINUTES****************')
-                            print('thank you for banking with us')
-                        elif payment_method=="credit/debit card":
+                            print('\n\n\n\nthank you for banking with us')
+                        elif payment_method=="2":
                             card_no=input('enter your card number')
                             cvv=input('enter your cvv number')
                             expiry=input('enter expiry date')
                             print('\n total will be detucted from your account')
                             print('\n\n\t\t********THANK YOU*********')
-                        elif payment_method=="upi":
+                        elif payment_method=="3":
                             upi=input('enter upi id:')
                             print('ID VERIFIED')
                             print('total will be detucted')
@@ -378,7 +395,10 @@ def book_input():
                     for i in Genre:
                         if i == g:
                             a=Genre.index(i)
-                            print(*genre[a])
+                            f=genre[a]
+                            for i in f:
+                                  print(i)
+                             
                     b=input("enter the desired book : ")
                     b+=","
                     cart.append(b)
@@ -390,7 +410,9 @@ def book_input():
                 for i in Genre:
                         if i == g:
                             a=Genre.index(i)
-                            print(*genre[a])
+                            f=genre[a]
+                            for i in f:
+                                print(i)
                 b=input("Enter the desired book : ")
                 b+=','
                 book_details()
@@ -421,18 +443,19 @@ def book_input():
                         print('GRAND TOTAL :',sum(total))
                         
                         print('please select a payment method :\nnet banking , credit/debit card , upi')
+                        print('   1                2             3')
                         payment_method=input=('>>>>')
-                        if payment_method=="net banking":
+                        if payment_method=="1":
                             bank=input('please type your bank:')
                             print('\n\n\n******************YOU WILL BE REDIRECTED IN A FEW MINUTES****************')
                             print('thank you for banking with us')
-                        elif payment_method=="credit/debit card":
+                        elif payment_method=="2":
                             card_no=input('enter your card number')
                             cvv=input('enter your cvv number')
                             expiry=input('enter expiry date')
                             print('\n total will be detucted from your account')
                             print('\n\n\t\t********THANK YOU*********')
-                        elif payment_method=="upi":
+                        elif payment_method=="3":
                             upi=input('enter upi id:')
                             print('ID VERIFIED')
                             print('total will be detucted')
@@ -444,7 +467,9 @@ def book_input():
                         for i in Genre:
                             if i == g:
                                 a=Genre.index(i)
-                                print(*genre[a])
+                                f=genre[a]
+                                for i in f:
+                                  print(i)
                         b=input("enter the desired book : ")
                         b+=","
                         cart.append(b)
